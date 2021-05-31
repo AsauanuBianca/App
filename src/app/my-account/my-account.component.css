@@ -1,0 +1,23 @@
+.mb-3{
+  font-size: 25px;
+  color:rgb(84, 148, 233);
+}
+
+.text{
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 200px;
+}
+.h6{
+  font-size: 25px;
+}
+.table-bordered{
+  width: 90%;;
+}
+.avatar {
+  vertical-align: middle;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+

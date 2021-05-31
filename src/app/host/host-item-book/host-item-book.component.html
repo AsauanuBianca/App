@@ -1,0 +1,23 @@
+ <a
+    style="cursor: pointer;"
+    [routerLink]="[index]"
+     routerLinkActive="active"
+    class="col-md-6 col-sm-6 animate-box"
+    >
+       <div class="hotel-entry">
+            <div  class="desc" >
+               <span  class="hotel-img">
+                     <img 
+                         [src]="host.imagePath"
+                         style="max-height: 500px"
+                          class="hotel-img"
+                       >
+                </span>
+                 <h3 >{{ host.content }}</h3>
+                 <span class="place">{{host.adress}}</span>
+                 <p >Entire apartment hosted by {{ host.title }}</p>
+            </div>
+      </div>
+</a>   
+                 
+               

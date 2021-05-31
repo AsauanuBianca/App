@@ -1,0 +1,16 @@
+   
+    .img-fluid {
+        max-width: 100%;
+        height: auto; }
+    .btn{
+        background-color: rgb(99, 184, 233);
+        color: seashell;
+    }
+
+    .mb-3{
+      color: rgb(98, 195, 252);
+      
+    }
+    .h3{
+      color: rgb(14, 145, 185);
+    }

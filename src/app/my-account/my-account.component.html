@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row my-2">
+        <div class="col-lg-8 order-lg-2">
+           
+            <div class="tab-content py-4">
+                <div class="tab-pane active" id="profile">
+                    <h5 class="mb-3">User Profile</h5>
+                    <br>
+                    <div class="col-lg-4 order-lg-1 text-center">
+                      <img src="assets/images/person1.jpg" alt="Avatar" class="avatar">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                          
+                            <h5>About</h5>
+                            <p>
+                              I'm Lynda, a full-time traveler! In the past I have dedicated all my free time and vacation days to travelers. Until the journey can be made more than a lifestyle, if they are taken or decidedly crazy: we have to manage on their own!
+                            </p>
+                            <br>
+                            <h5>Hobbies</h5>
+                            <p>
+                                Traveler
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+      <h5>My reservations</h5>
+      <br>
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Host or city</th>    
+            <th>Check in</th>
+            <th>Check out</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let post of loadedPosts">
+            <td>
+              {{post.place}}
+            </td>
+            <td>
+              {{post.start | date}}
+            </td>
+            <td>
+              {{post.end | date}}
+            </td>      
+          </tr>
+        </tbody>
+    </table>
+</div>

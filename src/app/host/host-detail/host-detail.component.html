@@ -1,0 +1,40 @@
+  <div class="row">
+      <div class="col-xs-12">
+        <img
+          [src]="host.imagePath"
+          class="img-responsive"
+          style="max-height: 300px;">
+      </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-xs-12">
+        <h1>{{ host.title}}</h1>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-xs-12">
+        {{ host.adress }}
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-xs-12">
+        {{ host.content }}
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-xs-12">
+        {{ host.description }}
+    </div>
+  </div>
+  <br>
+  
+  <button class="btn "(click)="onEditHost()">
+    Edit
+   </button>
+  <button class="btn "(click)="onDeleteHost()">
+    Delete
+  </button>

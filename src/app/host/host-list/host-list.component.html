@@ -1,0 +1,31 @@
+<div id="home" class="welcome-hero"  style="background-image: url('assets/images/hc.jpg');">
+  <div class="container">
+      <div class="welcome-hero-serch-box">
+          <div class="welcome-hero-form">
+              <div class="single-welcome-hero-form">
+              <form action="index.html">
+                  <div class="input_field">
+                    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Search for a host or city">
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+  <div class="colorlib-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="wrap-division">
+                       <app-host-item-book 
+                         *ngFor="let hostEl of hosts | filter:searchText; let i = index" 
+                          [host]="hostEl"
+                          [index]="i"
+                       ></app-host-item-book>
+                      </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

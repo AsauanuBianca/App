@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <button class="btn btn-info "(click)="onAddHost()">
+        Add a house
+      </button>
+      <button class="btn btn-info "(click)="onReservation()">
+        My houses
+      </button>
+      <br><br>
+      <h3 style="color: rgb(118, 205, 231) ">My reservations</h3>
+    </div>
+  </div>
+</div>
+<br /><br />
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <table>
+          <tr>
+            <th>Host or city</th>    
+            <th>Check in</th>
+            <th>Check out</th>
+          </tr>
+          <tr  *ngFor="let post of loadedPosts">
+            <td> {{post.place}}</td>
+            <td> {{post.start | date}}</td>
+            <td>{{post.end | date}}</td>
+          </tr>
+       </table>
+     </div>
+   </div>
+  </div>
+<br><br><br>

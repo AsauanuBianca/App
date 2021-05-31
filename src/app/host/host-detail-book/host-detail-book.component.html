@@ -1,0 +1,93 @@
+      
+    <div class="hero-wrap js-fullheight" >
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+    <section class="ftco-section ftco-degree-bg">
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-3 sidebar">
+                <div class="sidebar-wrap bg-light ftco-animate">
+                  <h3 style="color:rgb(71, 176, 224)"> Choose a date</h3>
+                    <br>
+                    <form #postForm="ngForm" (ngSubmit)="onCreateEvent(postForm.value)">
+                        <div class="form-group">
+                          <input type="text" class="hidden" placeholder="City"  id="place" [(ngModel)]="host.title"
+                          name="place"  required >
+                        </div>
+                        <div class="form-group">
+                          <input  id="start" class="form-control" placeholder="Date from" type="date"  ngModel value="start"
+                          name="start"  required >
+                        </div>
+                        <div class="form-group">
+                          <input  id="end" class="form-control" placeholder="Date to" type="date"  ngModel value="end"
+                          name="end" required>
+                        </div>
+                          <br>
+                            <button class="btn btn-info " type="submit" [disabled]="!postForm.valid">
+                              Book
+                            </button>
+                     </form>
+                </div>
+                
+          </div>
+          <div class="col-lg-9">
+              <div class="row">
+                  <div class="col-md-12 ftco-animate">
+                      <div class="single-slider owl-carousel">
+                        <h3>{{ host.content }}</h3> <br><br>
+                          <div class="item">
+                              <img
+                              [src]="host.imagePath"
+                              class="img-responsive"
+                              class="hotel-img">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="container">
+                    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                    <img id="expandedImg" style="width:100%">
+                    <div id="imgtext"></div>
+                  </div>
+                  <div class="col-md-12 hotel-single mt-4 mb-5 ftco-animate">
+                      <h2>Entire apartment hosted by {{host.title}}</h2><hr /> 
+                      <p>{{host.adress}}</p>
+                      <hr />
+                      <h4>About space</h4>
+                      <p> {{ host.description }}</p>
+                      <hr />
+                  </div>
+              </div>
+          </div> 
+        </div>
+    </div>
+ </section> 
+
+ <div class="container text-center my-5">
+  <div class="modal c" id="myModal" [style.display]="showModal ? 'block' : 'none'">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">{{ title }}</h4>
+          <button type="button" class="close" data-dismiss="modal" (click) = "ok()">&times;</button>
+        </div>
+        <div class="modal-body">
+          {{ content }}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal" (click) = "ok()">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

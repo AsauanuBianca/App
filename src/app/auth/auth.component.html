@@ -1,0 +1,54 @@
+
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <form class="login100-form validate-form" #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+        <span class="login100-form-title p-b-34">
+          Account Login
+        </span>
+        <div class="alert alert-danger" *ngIf="error">
+          <p>{{ error }}</p>
+        </div>
+        <div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type user name">
+          <input type="email"
+          id="email"
+          class="form-control"
+          ngModel
+          name="email"
+          required
+          email
+          placeholder="username or email">
+          <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100 rs2-wrap-input100 validate-input m-b-20" data-validate="Type password">
+          <input
+          type="password"
+          id="password"
+          class="form-control"
+          ngModel
+          name="password"
+          required
+          minlength="6"
+          placeholder="password"
+        />
+          <span class="focus-input100"></span>
+        </div>
+        
+        <div class="container-login100-form-btn">
+          <button class="btn btn-info"  type="submit"
+          [disabled]="!authForm.valid">
+          {{ isLoginMode ? 'Login' : 'Sign Up' }}
+          </button>
+        </div>
+        <div class="w-full text-center">
+          <button class="btn btn-info"  (click)="onSwitchMode()" type="button">
+            Switch to {{ isLoginMode ? 'Sign Up' : 'Login' }}
+          </button>
+        </div>
+      </form>
+
+      <div class="login100-more" style="background-image: url('assets/images/ah.jpg');"></div>
+    </div>
+  </div>
+</div>
+

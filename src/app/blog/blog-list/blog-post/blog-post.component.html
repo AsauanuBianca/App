@@ -1,0 +1,43 @@
+
+{{postComments.lenght | json}}
+
+    <h6 *ngIf="postComments.length<1">No Comments found</h6>
+    <ul class="comment-list" *ngIf="postComments.length>0">
+        <li class="comment" *ngFor="let post of postComments; let i = index;">
+            <div >
+                <div class="vcard bio">
+                    <img src="assets/images/person1.jpg" alt="Image placeholder">
+                </div>
+                <div class="comment-body">
+                    <h3>{{ post.commentName  }}</h3>
+                    <div class="meta">{{post.currentDate | date: 'dd MMM yyyy hh:mm a'}}</div>
+                    <p>{{ post.commentTxt }}</p><br>
+                    <div class="actions">
+                        <span class="divider"></span>
+                        <button class="b-reply" (click)="replyComment(i, post.id)">
+                            Reply
+                        </button>
+                        <span class="divider"></span>
+                    </div><br>
+                    <div class="comment-body">
+                        <div datacontainer></div><hr>
+                    <ul *ngIf="post?.replyComment?.length>0">
+                        <li *ngFor="let rl of post.replyComment">
+                            <div >
+                                <div class="vcard bio">
+                                    <img src="assets/images/person1.jpg" alt="Image placeholder">
+                                </div>
+                                <h3>{{ rl.commentName  }}</h3>
+                                <div class="meta">{{rl.currentDate | date: 'dd MMM yyyy hh:mm a'}}</div>
+                                <br><p>{{ rl.commentTxt }}</p>
+                            </div>
+                        </li>
+                    </ul>       
+                    </div>
+                </div>
+                    <hr>
+                    
+                       
+            </div>
+        </li>
+    </ul>

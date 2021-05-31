@@ -1,0 +1,49 @@
+
+
+<div class="header-area ">
+    <div id="sticky-header" class="main-header-area">
+        <div class="container-fluid">
+            <div class="header_bottom_border">
+                <div class="row align-items-center">
+                    <div class="col-xl-2 col-lg-2">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="assets/images/ogo1.jpg" alt=""style="width:200x;height:45px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="main-menu  d-none d-lg-block">
+                            <nav>
+                                <ul id="navigation">
+                                    <li routerLinkActive='active'><a routerLink="/home">Home</a></li>
+                                   
+                                    <li routerLinkActive='active'><a routerLink="/host">Host</a></li>
+                                   
+                                    <li routerLinkActive='active'  ><a routerLink="/blog">Blog</a></li>
+                                     
+                                     <li routerLinkActive='active'  *ngIf="isAuthenticated"><a >My Profile<i class="ti-angle-down"></i></a>
+                                        <ul class="submenu">
+                                            <li><a routerLink="/admin">Administrator</a></li>
+                                            <li><a routerLink="/myProfile">Traveler</a></li>
+                                        </ul>
+                                    </li>
+                                    <li routerLinkActive='active'  *ngIf="isAuthenticated"><a routerLink="/rules">Do you want to be a host?<i class="ti-angle-down"></i></a>
+                                    <li routerLinkActive='active' *ngIf="!isAuthenticated" ><a routerLink="/login">Login</a></li>
+
+                                    <li *ngIf="isAuthenticated" >
+                                        <a style="cursor: pointer;" (click)="onLogout()"  routerLink="/home">Logout</a>
+                                    </li>
+                                     
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                   
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

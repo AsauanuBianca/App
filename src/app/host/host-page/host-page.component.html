@@ -1,0 +1,15 @@
+
+<button class="button-s" (click)="onCancel()">
+  Back
+</button>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-host-item
+        *ngFor="let hostEl of hosts; let i = index"
+        [host]="hostEl"
+        [index]="i">
+      </app-host-item>
+    </div>
+  </div>
+  

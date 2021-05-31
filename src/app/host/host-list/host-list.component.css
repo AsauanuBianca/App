@@ -1,0 +1,124 @@
+
+.welcome-hero {
+    position: relative;
+   background: no-repeat;
+    background-position:center;
+    background-size:cover;
+    text-align: center;
+    height:800px;
+    z-index: 1;
+}
+.welcome-hero:before{
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:transparent;
+    z-index: -1;
+}
+.welcome-hero-txt { padding-top: 155px;}
+
+.welcome-hero-txt h2 {
+    font-size: 48px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    line-height: 1.4;
+}
+.welcome-hero-txt p {
+    font-size: 18px;
+    color: #fcfcfc;
+    margin-top: 25px;
+}
+
+.welcome-hero-serch-box{margin-top: 600px;display: flex;}
+.welcome-hero-form {
+    display: flex;
+    background: #fff;
+    height: 70px;
+    border-radius: 3px;
+    width: 85%;
+}
+.single-welcome-hero-form {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    padding: 0 30px;
+}
+
+.single-welcome-hero-form input {
+    margin-left: 10px;
+    height: 70px;
+    width: 300px;
+    border: 0;
+    background: transparent;
+}
+.single-welcome-hero-form input[type="text"]{
+    font-size: 14px;
+    color: #859098;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.welcome-hero-form-icon {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #252d32;
+}
+.welcome-hero-btn {
+    display:  flex;
+    justify-content:  center;
+    align-items:  center;
+    font-size:  14px;
+    color:  #fff;
+    width:  170px;
+    height:  70px;
+    background:  #40bbda;
+    text-transform:  capitalize;
+    margin-left:  30px;
+    border-radius: 3px;
+    -webkit-transition: 0.3s linear; 
+    -moz-transition: 0.3s linear; 
+    -ms-transition: 0.3s linear; 
+    -o-transition: 0.3s linear; 
+    transition: 0.3s linear;
+}
+.welcome-hero-btn:hover{background: #1068a3;}
+
+.welcome-hero-btn svg {
+    width:  14px;
+    height:  auto;
+    margin-left:  12px;
+}
+.input_field{
+	position: center;
+}
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .button-s{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 18px 38px;
+    color: #ffffff;
+    background: #F9AD81;
+    letter-spacing: 0.5px;
+   }
+.form-control{
+    background-color: rgb(255, 255, 255);
+}
+
